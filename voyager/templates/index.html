@@ -5,9 +5,38 @@
   <body>
     <h1>Operations</h1>
     <ol>
-      <li><a href="/sailors/add">add a sailor</a></li>
-      <li><a href="/boats/add">add a boat</a></li>
-      <li><a href="/voyages/add">add a voyage</a></li>
+      <li>
+        <form action="sailors/add" method=POST>
+          <label>name</label>
+          <input name = "add-sailor-name"/>
+          <label>age</label>
+          <input name = "add-sailor-age"/>
+          <label>Experience</label>
+          <input name = "add-sailor-experience"/>
+          <input type=submit value="Add New Sailor "/>
+        </form> 
+      </li>
+      <li>
+        <form action = "boats/add" method=POST>
+          <label>name</label>
+          <input name = "add-boat-name"/>
+          <label>color</label>
+          <input name = "add-color-name"/>
+          <input type=submit value="Add New Boat"/>
+
+        </form>
+      </li>
+      <li>
+        <form action = "voyages/add" method=POST>
+        <label>sid</label>
+        <input name = "add-sid"/>
+        <label>bid</label>
+        <input name = "add-bid"/>
+        <label>Date</label>
+        <input name = "add-date"/>
+        <input type=submit value="Add New Voyage"/>
+        </form>
+      </li>
     </ol>
     <h1>Views</h1>
     <ol>
@@ -29,14 +58,14 @@
         </form>
       </li>
       <li>
-        <form action="/sailors/who-sailed-on-date" method=GET>
+        <form action="/sailors/who-sailed-on-date" method=POST>
           <label>date</label>
           <input name="date"/>
           <input type=submit value="sailors who sailed on date"/>
         </form>
       </li>
       <li>
-        <form action="/sailors/who-sailed-on-boat-of-color" method=GET>
+        <form action="/sailors/who-sailed-on-boat-of-color" method=POST>
           <label>color</label>
           <input name="color"/>
           <input type=submit value="sailors who sailed on boat of color"/>
